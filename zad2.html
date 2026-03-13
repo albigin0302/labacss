@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 2 — Вертикальное меню</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.vertical-menu {
+    list-style: none;
+    padding: 0;
+    width: 200px;
+    background: #f4f4f4;
+    border: 1px solid #ccc;
+}
+
+.vertical-menu li {
+    position: relative;
+    border-bottom: 1px solid #ccc;
+}
+
+.vertical-menu li:last-child {
+    border-bottom: none;
+}
+
+.vertical-menu a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: #333;
+    background: linear-gradient(to bottom, #f9f9f9, #e0e0e0);
+}
+
+.vertical-menu a:hover {
+    background: linear-gradient(to bottom, #ccc, #aaa);
+    color: white;
+}
+
+/* Подменю */
+.submenu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 180px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    display: none;
+}
+
+.has-submenu:hover > .submenu {
+    display: block;
+}
+
+.submenu li {
+    border-bottom: 1px solid #eee;
+}
+
+.submenu a {
+    padding: 10px;
+    background: #fff;
+}
+    </style>
+</head>
+<body>
+    <ul class="vertical-menu">
+        <li><a href="#">Главная</a></li>
+        <li class="has-submenu">
+            <a href="#">Услуги</a>
+            <ul class="submenu">
+                <li><a href="#">Веб-дизайн</a></li>
+        <li class="has-submenu">
+            <a href="#">Разработка</a>
+            <ul class="submenu">
+                <li><a href="#">Frontend</a></li>
+                <li><a href="#">Backend</a></li>
+            </ul>
+        </li>
+        <li><a href="#">SEO</a></li>
+            </ul>
+        </li>
+        <li class="has-submenu">
+            <a href="#">О компании</a>
+            <ul class="submenu">
+                <li><a href="#">История</a></li>
+                <li><a href="#">Команда</a></li>
+                <li><a href="#">Вакансии</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Контакты</a></li>
+    </ul>
+</body>
+</html>
